@@ -1,0 +1,55 @@
+/* .box{
+    background-color: gray;
+    font-weight: bold;
+    font-size: 16px;
+    width:100%;
+    height:100px;
+    border:3px dashed blaCK;
+    margin:10px;
+}
+.square ol{
+    list-style-type:decimal-leading-zero;
+    list-style-image: url(eeclogo.jpeg);   
+}
+.rectangle ul{
+    list-style-type:circle;
+}
+
+.combine{
+    background-color: blue;
+    background-size: auto;
+}
+.static-box{
+    position: static;
+    
+}
+.relative-box{
+    position: relative;
+    top:10px;
+    left: 20px;
+    background-color:lightblue;
+}
+.parent{
+    position: relative;
+    height:150px;
+    background-color: lightseagreen;
+}
+.absolute-box{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    background-color: burlywood;
+}
+.fixed-box{
+    position:fixed;
+    bottom:10px;
+    left:10px;
+    background-color: chocolate;
+}
+.sticky-box{
+    position:sticky;
+    top: 100px;
+    background-color: blue;
+}
+
+ */

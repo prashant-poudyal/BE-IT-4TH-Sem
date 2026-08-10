@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <h2>Error Handling</h2>
+    <input type="text" id="age" placeholder="Enter Age">
+    <button onclick="checkAge()"> Check</button>
+    <p id="result"></p>
+
+    <script>
+    function checkAge(){
+        let age=document.getElementById("age").value;
+        try{
+            if(age == ""){
+                throw "Age cannot be empty";
+            }
+            if(isNaN(age)){
+                throw "Age must be numeric";
+            }
+            if(age<18){
+                throw "Age must be 18 or above";
+            }
+            document.getElementById("result").innerHTML="Elligible for Registration";
+      }
+      catch(error){
+        document.getElementById("result").innerHTML=error;
+      }
+      finally{
+        console.log("validation completed");
+      }
+    }
+    </script>
+
+    
+</body>
+</html>

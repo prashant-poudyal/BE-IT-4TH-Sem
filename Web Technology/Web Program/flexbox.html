@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+</head>
+<style>
+
+.card{
+    width: 100px;
+    height:100px;
+    margin: 2px;
+    text-align:center;
+    background-color: lightcoral;
+    border: 2px solid blue;
+}
+.aontainer{
+        display:flex;
+        flex-direction: row;
+        /* justify-content: space-around; */
+        align-items:stretch;
+        flex-wrap: no wrap;
+        gap: 5px;
+    }
+.bontainer{
+        display:flex;
+        flex-direction:row;
+        /* justify-content: flex-end; */
+        align-items: flex-start;
+    }
+.container{
+        display:flex;
+        flex-direction:column;
+        /* justify-content: center; */
+         align-items: flex-end;
+    }
+.dontainer{
+        display:flex;
+        flex-direction:row;
+        /* justify-content:space-between; */
+         align-items: center;
+    }
+      
+.eontainer{
+        display:flex;
+        flex-direction:column;
+        /* justify-content:space-evenly; */
+        text-align: baseline;
+    }
+/* div{
+        width:100%;
+        /* height: 500px; */
+        /* border: 2px solid red; */
+        /* background-color: aquamarine; */
+        /* color: blue; */
+    /* }  */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color:lightgreen;
+    height: 50px;
+    font-size: 20px;
+}
+menu{
+    display:flex;
+    gap:20 px;
+}
+menu a{
+    color:white;
+    text-decoration: none;
+    font-size: 14px;
+}
+menu a:hover{
+    background-color: yellow;
+    box-shadow: 5px 5px 2 px green;
+}
+</style>
+<body>
+            <div class="navbar">
+        <div class="logo">Everest Engineering College
+        </div>
+    
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Departments</a>
+        <a href="#">Admissions</a>
+        <a href="#">Notice</a>
+        <a href="#">Contact</a>
+    </div>
+    </div>
+    <div>
+    <div class="aontainer">
+
+        <div class="card dept1">
+            Computer Engineering <br>
+            Everest Engineering College
+        </div>
+    <div class="card dept2">
+            Software Engineering <br>
+            Everest Engineering College
+     </div>
+    <div class="card dept3">
+            IT Engineering <br>
+            Everest Engineering College
+    </div>
+    <div class="card dept3">
+            civil Engineering <br>
+            Everest Engineering College
+    </div><br><br>
+    </div>
+    </div>
+
+
+     <!-- <div class="bontainer">
+
+        <div class="card dept1">
+            Computer Engineering <br>
+            Everest Engine ering College
+        </div>
+    <div class="card dept1">
+            Software Engineering <br>
+            Everest Engineering College
+     </div>
+    <div class="card dept1">
+            IT Engineering <br>
+            Everest Engineering College
+    </div>
+    <div class="card dept1">
+            civil Engineering <br>
+            Everest Engineering College
+    </div> 
+     </div><br><br>
+
+     <div class="container">
+
+        <div class="card dept1">
+            Computer Engineering <br>
+            Everest Engineering College
+        </div>
+    <div class="card dept1">
+            Software Engineering <br>
+            Everest Engineering College
+     </div>
+    <div class="card dept1">
+            IT Engineering <br>
+            Everest Engineering College
+    </div>
+    <div class="card dept1">
+            civil Engineering <br>
+            Everest Engineering College
+    </div>
+    </div><br><br>
+     <div class="dontainer">
+
+        <div class="card dept1">
+            Computer Engineering <br>
+            Everest Engineering College
+        </div>
+    <div class="card dept1">
+            Software Engineering <br>
+            Everest Engineering College
+     </div>
+    <div class="card dept1">
+            IT Engineering <br>
+            Everest Engineering College
+    </div>
+    <div class="card dept1">
+            civil Engineering <br>
+            Everest Engineering College
+    </div>
+     </div><br><br>
+
+     <div class="eontainer">
+
+        <div class="card dept1">
+            Computer Engineering <br>
+            Everest Engineering College
+        </div>
+    <div class="card dept1">
+            Software Engineering <br>
+            Everest Engineering College
+     </div>
+    <div class="card dept1">
+            IT Engineering <br>
+            Everest Engineering College
+    </div>
+    <div class="card dept1">
+            civil Engineering <br>
+            Everest Engineering College
+    </div>
+
+
+    </div> -->
+</body>
+</html>

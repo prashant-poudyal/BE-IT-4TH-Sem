@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Function Example</title>
+</head>
+<body>
+    <script>
+        function showMessage(){
+            document.write("hello students")
+        }
+        showMessage();
+    </script>
+ <br>   <script>
+
+        function greet(name){
+            document.write("welcome"+name);
+        }
+        greet("ram");
+        </script>
+<br> <script>
+        function getNumber(){
+            return 100;
+           
+        }
+
+
+        function add(a,b){
+            return a+b;
+        }
+       
+        greet("ram");
+       
+        let value=getNumber();
+        document.write(value);
+       
+        let result=add(10,20);
+        decument.write("sum=+result");
+        </script>
+<br><script>
+        function factorial (n){
+            if(n==0||n==1){
+                return 1;
+            }
+            else{
+        return n * factorial(n-1);
+            }
+            
+        }
+        let result1=factorial(5);
+        document.write("factorial="+result1);
+
+</script>
+<br><script>
+    let fruits=["apple","mango","orange"];
+    document.write(fruits);
+</script>
+<br><script>
+    let sports= new Array("samdhi","samdhini");
+    document.write(sports);
+</script><br>
+   <script>
+    let sale= ["apple","mango","orange"];
+    sale[1]="banana";
+    document.write(sale);
+    document.write(fruits.length);
+   </script>
+
+   <br><script>
+        let fruits1=["apple","mango","orange"];
+        for(let i=0;i<fruits1.length; i++)
+        {
+             document.write(fruits1 [i]+"<br>");
+        }
+   </script>
+
+      <br><script>
+        let falful=["apple","mango","orange"];
+        for(let fruit of falful)
+        {
+             document.write(fruit+"<br>");
+        }
+   </script>
+<br><script>
+        let fal=["apple","mango","orange"];
+        fal.push("orange");
+        document.write(fal);
+   </script>
+
+<br><script>
+        let sausuntala=["apple","mango","orange"];
+        sausuntala.pop("orange");
+        document.write(sausuntala);
+   </script>
+
+
+<br><script>
+        let suntalaseu=["apple","mango","orange"];
+        suntalaseu.shift("orange");
+        document.write(suntalaseu);
+   </script>
+
+      <br><script>
+        let sauapp=["apple","mango","orange"];
+        sauapp.unshift("abc");
+         document.write(sauapp);
+   </script>
+
+<br><script>
+        let suntalaapp=["apple","mango","orange"];
+      
+        document.write(suntalaapp.indexOf("mango"));
+   </script>
+
+<br><script>
+        let appseu=["apple","mango","orange"];
+        document.write(appseu.includes("mango"));
+   </script>
+
+<br><script>
+    let numbers=[50,40,10];
+    numbers.sort();
+    document.write(numbers);
+</script>
+
+<br><script>
+    let rev=[50,40,10];
+    rev.reverse();
+    document.write(rev);  
+</script>
+
+<script>
+    let arr=[];
+    
+    let n=parseInt(prompt("enter the number of elements:"));
+    
+    for(let i=0; i<n;i++){
+        arr[i]=prompt("enter elemnts"+ (i+1)+ ":");
+    }
+    
+    document.write("<h3> Array Elements</h3>");
+   
+    for(let i=0; i<n;i++){
+      
+        document.write(arr[i] + "<br>");
+    }
+</script>
+
+
+<
+
+</body>
+</html>

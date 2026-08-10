@@ -1,0 +1,29 @@
+[
+    {
+    "roll":1,
+    "name":"ram Sharma",
+    "age":20,
+    "faculty":"bca"
+    },
+
+    {
+    "roll":2,
+    "name":"sita rai",
+    "age":21,
+    "faculty":"BSc Csit"
+    },
+
+    {
+    "roll":3,
+    "name":"Hari Thapa",
+    "age":19,
+    "faculty":"BIM"
+    },
+
+    {
+    "roll":4,
+    "name":"gita magar",
+    "age":22,
+    "faculty":"bca"
+    }    
+]

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Using Javascript</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightblue;
+        }
+
+        .container{
+            width: 700px;
+            margin: 30px auto;
+            background-color: aqua;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        label{
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .required{
+            color: red;
+            font-weight: bold;
+        }
+
+        .error{
+            color: red;
+            font-size: 14px;
+        }
+
+        .success{
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <form id="registrationForm">
+
+        <h1>Student Registration Form</h1>
+
+        <p>Fields marked with <span class="required">*</span> are compulsory</p>
+
+        <label>
+            Name: <span class="required">*</span>
+        </label>
+        <input type="text" id="name">
+        <span id="nameError" class="error"></span>
+
+        <label>
+            Email: <span class="required">*</span>
+        </label>
+        <input type="text" id="email">
+        <span id="emailError" class="error"></span>
+
+        <label>
+            Phone Number: <span class="required">*</span>
+        </label>
+        <input type="text" id="phone">
+        <span id="phoneError" class="error"></span>
+
+        <label>
+            Username: <span class="required">*</span>
+        </label>
+        <input type="text" id="username">
+        <span id="usernameError" class="error"></span>
+
+        <label>
+            Password: <span class="required">*</span>
+        </label>
+        <input type="password" id="password">
+        <span id="passwordError" class="error"></span>
+
+        <label>
+            Confirm Password: <span class="required">*</span>
+        </label>
+        <input type="password" id="confirmPassword">
+        <span id="confirmPasswordError" class="error"></span>
+
+        <br><br>
+        <button type="submit">Register</button>
+
+    </form>
+
+    <p id="successMessage" class="success"></p>
+
+</div>
+
+<script>
+
+document.getElementById("registrationForm").addEventListener("submit", validateForm);
+
+function validateForm(event){
+
+    event.preventDefault();
+
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("phoneError").innerHTML = "";
+    document.getElementById("usernameError").innerHTML = "";
+    document.getElementById("passwordError").innerHTML = "";
+    document.getElementById("confirmPasswordError").innerHTML = "";
+    document.getElementById("successMessage").innerHTML = "";
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+    let valid = true;
+
+    let namePattern = /^[A-Za-z ]+$/;
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let phonePattern = /^[0-9]{10}$/;
+    let usernamePattern = /^[a-zA-Z0-9]{4,12}$/;
+    let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+    if(name === ""){
+        document.getElementById("nameError").innerHTML = "Name is required";
+        valid = false;
+    }
+    else if(!namePattern.test(name)){
+        document.getElementById("nameError").innerHTML = "Only letters and spaces allowed";
+        valid = false;
+    }
+
+    if(email === ""){
+        document.getElementById("emailError").innerHTML = "Email is required";
+        valid = false;
+    }
+    else if(!emailPattern.test(email)){
+        document.getElementById("emailError").innerHTML = "Invalid email format";
+        valid = false;
+    }
+
+    if(phone === ""){
+        document.getElementById("phoneError").innerHTML = "Phone number is required";
+        valid = false;
+    }
+    else if(!phonePattern.test(phone
+        
+    )){
+        document.getElementById("phoneError").innerHTML = "Phone number must be 10 digits";
+        valid = false;
+    }
+
+    if(username === ""){
+        document.getElementById("usernameError").innerHTML = "Username is required";
+        valid = false;
+    }
+    else if(!usernamePattern.test(username)){
+        document.getElementById("usernameError").innerHTML = "Username must be 4-12 characters";
+        valid = false;
+    }
+
+    if(password === ""){
+        document.getElementById("passwordError").innerHTML = "Password is required";
+        valid = false;
+    }
+    else if(!passwordPattern.test(password)){
+        document.getElementById("passwordError").innerHTML =
+        "Password must contain uppercase, lowercase, number and be at least 8 characters";
+        valid = false;
+    }
+
+    if(confirmPassword === ""){
+        document.getElementById("confirmPasswordError").innerHTML =
+        "Confirm Password is required";
+        valid = false;
+    }
+    else if(password !== confirmPassword){
+        document.getElementById("confirmPasswordError").innerHTML =
+        "Passwords do not match";
+        valid = false;
+    }
+
+    if(valid){
+        document.getElementById("successMessage").innerHTML =
+        "Registration Successful!";
+    }
+}
+
+</script>
+
+</body>
+</html>

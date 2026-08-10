@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="note">First Note</p>
+    <p class="note">Second Note</p>
+    <script>
+        let notes=document.getElementsByClassName("note");
+        console.log(notes[1].textContent);
+    </script>
+
+   <h1>Heading 1</h1>
+   <h1>heading 2</h1>
+ 
+    <script>
+        let headings=document.getElementsByTagName("h1");
+        console.log(headings[1].textContent);
+    </script>
+
+    <p class="info">Information</p>
+    <script>
+        let data =document.querySelector(".info");
+        console.log(data.textContent);
+    </script>
+
+    <p class="item">Item One</p>
+    <p class="item">Item Two</p>
+        <script>
+        let items=document.querySelectorAll (".item");
+        console.log(items[1].textContent);
+    </script>
+
+    <p id="demo">Welcome</p>
+        <script>
+        let content =document.getElementById("demo").innerHTML;
+        console.log(content);
+    </script>
+
+
+<p id="msg">Hello Students</p>
+    <script>
+        let text=document.getElementById("msg").textContent;
+        console.log(text);
+    </script>
+
+<input type="text" id="username">
+<button onclick="showData()">Submit
+
+</button>
+<script>
+function showData(){
+    let name=document.getElementById("username").value;
+    alert(name);
+}
+</script>
+
+
+
+<p id="dem"> Old Content</p>
+<script>
+    document.getElementById("dem").innerHTML="New Content";
+</script>
+
+<p id = "mssage">Welcome</p>
+<Script>
+    document.getElementById("mssage").textContent="Hello Students";
+</Script>
+
+
+
+
+<p id="txt">Javascript Example</p>
+<script>
+    document.getElementById("txt").style.color="red";
+    document.getElementById("txt").style.fontSize="24px";
+</script>
+
+</body>
+</html>

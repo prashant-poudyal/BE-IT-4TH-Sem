@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        body{
+            margin: 10px width: 200px height:100px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .navbar{
+            background-color: goldenrod;
+            overflow: hidden;
+        }
+        .navbar a{
+            float:left;
+            display:block;
+            color:aliceblue
+            text-align:center;
+            padding:14px 20px;
+            text-decoration:none;
+        }
+        .navbar a:hover{
+            background-color:blue;
+            color:black;
+        }
+    </style>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href=about>About</a>
+        <a href=Services>Services</a>
+        <a href=contact>Contact</a>
+
+    </div>
+    <h2> Login/Registration Form</h2>
+ <table border="10" cellpadding="20" cellspacing="0" bgcolor="white">
+    <tr>
+        <td>First Name:</td>
+       <td> <input type ="text" name="f_name" Placeholder="Enter First Name">
+        </td>
+        <td rowspan="4">Upload Photo:
+            <input type="file" name="photo"
+        </td>
+
+    </tr>
+    <tr>
+        <td>Last Name:</td>
+        <td>
+        <input type ="text" name="l_name" Placeholder="Enter Last Name">
+        </td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><input type ="text" name="e_name" Placeholder="Enter Email">
+        </td>
+    </tr>
+        
+    <tr>
+        <td>Password:</td>
+        <td><input type ="text" name="p_name" Placeholder="Enter Password">
+        </td>
+    </tr>
+     <tr>
+        <td >Gender:</td>
+        <td colspan="2"><input type="radio" id="name"name="gender" checked>
+		<label for="male">male</label>
+        <input type="radio" id="female"name="gender" >
+		<label for="female">female</label>
+        <input type="radio" id="others"name="gender">
+		<label for="male">others</label>
+		<br>
+        </td>
+     </tr>
+     <tr>
+        <td >Hobbies:</td>
+        <td colspan="2"><input type="checkbox" id="html" name="checkbox" value="HTML">
+		<label	for="html">Reading</label>
+        <input type="checkbox" id="html" name="checkbox" value="HTML">
+		<label	for="html">Sports</label>
+        <input type="checkbox" id="html" name="checkbox" value="HTML">
+		<label	for="html">Music</label>
+        </td>
+    </tr>
+     <tr>
+        <td >Country:</td>
+        <td colspan = "2">
+            <select name="Country" required>
+                <option value="">Select Country</option>
+                <option value="Nepal">Nepal</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><input type="submit" value=Register>
+                <input type="submit" value-="reset">
+                </td>
+            
+        </tr>
+
+
+        
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+</head>
+<body>
+
+    <h2>Student Records (Loading using XHR)</h2>
+
+    <button onclick="loadStudents()">Load Students</button>
+
+    <ol id="studentList"></ol>
+
+    <p id="error" style="color:red;"></p>
+
+    <script>
+        function loadStudents() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "student.json", true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        var data = JSON.parse(xhr.responseText);
+
+                        var list = document.getElementById("studentList");
+                        list.innerHTML = "";
+
+                        data.students.forEach(function (student) {
+                            var li = document.createElement("li");
+                            li.textContent = student.name + " (" + student.id + ")";
+                            list.appendChild(li);
+                        });
+
+                        // Clear previous error message
+                        document.getElementById("error").innerText = "";
+                    } else {
+                        document.getElementById("error").innerText =
+                            "Failed to load data. Server Error: " + xhr.status;
+                    }
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+</html>

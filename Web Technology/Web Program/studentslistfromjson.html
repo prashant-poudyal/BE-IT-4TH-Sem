@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        li{
+            border:1px solid black;
+            margin:10px;
+            padding:10px;
+            background-color:aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Records</h2>
+
+    <ol id="studentList"></ol>
+
+    <p id="errorMsg" style="color:red;"></p>
+
+    <script>
+        async function loadStudents() {
+
+            try {
+
+                const response = await fetch("students.json");
+
+                if (!response.ok) {
+                    throw new Error("Unable to load JSON file.");
+                }
+
+                const students = await response.json();
+
+                let output = "";
+
+                students.forEach(student => {
+
+                    output += `
+                        <li>
+                            <b>Roll:</b> ${student.roll}<br>
+                            <b>Name:</b> ${student.name}<br>
+                            <b>Age:</b> ${student.age}<br>
+                            <b>Faculty:</b> ${student.faculty}
+                        </li>
+                    `;
+
+                });
+
+                document.getElementById("studentList").innerHTML = output;
+
+            }
+            catch(error) {
+
+                document.getElementById("errorMsg").innerText = error.message;
+
+            }
+
+        }
+
+        loadStudents();
+    </script>
+
+</body>
+</html>
+

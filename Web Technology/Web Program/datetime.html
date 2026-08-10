@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time </title>
+</head>
+<body>
+    
+    <script>
+        let d=new Date();
+        console.log(d);
+    </script>
+
+    <script>
+        let b=new Date(2026,5,21);
+        document.write(b);
+    </script>
+
+    <br><script>
+        let c=new Date( 2026,5,21,10,30,45);
+        document.write(c);
+    </script>
+
+    <br><script>
+        let a=new Date( "june 21,2026");
+        document.write(a);
+    </script>
+
+     <br><script>
+        let e=new Date("0");
+        document.write(e);
+    </script>
+
+    <br><script>
+        let now=new Date();
+        document.write("Date:",now.getDate()+"<br>");
+        document.write("Month:",now.getMonth()+"<br>");
+        document.write("Year:",now.getFullYear()+"<br>");
+        document.write("Day:",now.getDay()+"<br>");
+        document.write("Time:",now.getHours() +":"+ now.getMinutes() +":"+ now.getSeconds()+"<br>");
+         
+    </script>
+    <script>
+        let data=new Date();
+        document.write("Orginal Date:",d +"<br>");
+        data.setFullYear(2030);
+        data.setMonth(11);
+        data.setDate(25);
+        data.setHours(8);
+        data.setMinutes(30);
+        document.write("Modofied date:",data +"<br>");
+    </script>
+
+    <br><script>
+        let g=16;
+        let h=-9;
+        document.write("Number a:",g  +"<br>");
+        document.write("Number b:",h  +"<br>");
+
+        document.write("\n======== Rounding Functions ======="  +"<br>");
+        document.write("Round(4.6):",Math.round(4.6)  +"<br>");
+        document.write("Ceil(4.2):",Math.ceil(4.2)  +"<br>");
+        document.write("Round(4.9):",Math.floor(4.9)  +"<br>");
+        document.write("Trunc(4.9):",Math.trunc(4.9) +"<br>");
+
+        document.write("\n======== Power and Root ======="  +"<br>");
+        document.write("Power(2^3):",Math.pow(2,3)  +"<br>");
+        document.write("Square Root Of a:",Math.sqrt(a)  +"<br>");
+
+        document.write("\n======== Absolute Value ======="  +"<br>");
+        document.write("Absolute of b",Math.abs(b)  +"<br>");
+
+        document.write("\n======== Maximum and Minimum ======="  +"<br>");
+        document.write("Max",Math.max(10,50,30,5)  +"<br>");
+        document.write("Min",Math.min(10,50,30,5)  +"<br>");
+
+        document.write("\n======== Random Numbers ======="  +"<br>");
+        document.write("Random (0-1):",Math.random() +"<br>");
+        document.write("Random (1-100):",Math.floor( Math.flor(Math.random()*100)+1) +"<br>");
+         
+    </script>
+   
+   <Script>
+    const add=(x,y)=> x+y  +"<br>";
+    document.write(add(5,3));
+    </Script>
+
+</body>
+</html>

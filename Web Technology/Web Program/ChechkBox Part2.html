@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form example</title>
+</head>
+<body>
+	<form>
+		<!-- action: refers ti the derver side script or resource that will handle the form -->
+		<!-- method:defines methos for ttransmitting form data -->
+		<label for="username">username</label>
+		<input type="text" id="username" name="user_name" required><!-- 
+		<label for="message">message</label>
+		<textarea id="message" name="user_name0" rows="2" cols="2" required ></textarea> -->
+		<br>
+		
+		<input type="radio" id="name"name="gender">
+		<label for="male">male</label>
+		<br>
+
+		
+		<input type="radio" id="female"name="gender" checked>
+		<label for="female">female</label>
+		<br>
+		<input type="checkbox" id="newletter" name="newletter" value="yes" >
+		<label for="newkerrwe">Subscribe to newletter:</label>
+		<br>
+		<input type="checkbox" id="newletter" name="newletter" value="yes" >
+		<label for="newkerrwe">UNSubscribe to newletter:</label>
+		<br>
+		<input type="checkbox" id="newletter" name="newletter" value="yes">
+		<label for="newkerrwe">unfollow</label>
+<!-- 	
+		<label for="others">others</label>
+		<input type="radio" id="others"name="gender" value="others"> -->
+		<br>
+		<input type="submit" name="save">
+	</form>
+
+</body>
+</html>

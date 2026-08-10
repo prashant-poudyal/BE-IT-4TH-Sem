@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Hnadling In JS</title>
+</head>
+<body>
+    <button onclick="alert('Hello')"> Click Me</button>
+    <button id="btn"> Thich </button>
+    <script>
+    document.getElementById("btn").onclick=function(){
+        alert("Button Clicked");
+    };
+    </script>
+<script>
+    document.getElementById("btn")
+    .addEventListener("click",function()
+{
+    alert("button Clicked")
+});
+    </script>
+
+    <h2>Mouse Events</h2>
+    <div id="box" style="width:250px; height:100px;background-color:lightblue;text-align:center;line-height:100px;""> Move Mouse Here </div>
+
+<p id="output"></p>
+
+<script>
+    let box=document.getElementById("box");
+    
+    box.addEventListener("click",function()
+{
+    document.getElementById("output").innerHTML="Click Event Occured";
+});
+
+    box.addEventListener("mouseover",function()
+{
+    document.getElementById("output").innerHTML="Mouse Over Event Occured";
+});
+</script>
+
+
+
+<h2>Keyboard Events</h2>
+<input type="text" id="txtName" placeholder="Type Here">
+<p id="outpt"></p>
+<script>
+    let txt=document.getElementById("txtname");
+    txt.addEventListener("keydown",function(){
+        document.getElementById("outpt").innerHTML="Key Down Event";
+    });
+    
+    
+    </script>
+
+
+
+
+
+</body>
+</html>

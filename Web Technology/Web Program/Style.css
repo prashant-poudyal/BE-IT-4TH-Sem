@@ -1,0 +1,169 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color:lightseagreen
+}
+.box{
+   text-align: center;
+}
+.classselctor{
+    border:3px,solid,darkred;
+    margin: 20px;
+}
+#div1{
+    color: blanchedalmond;
+    font-size: 20px;
+    background-color: brown;
+}
+.a p{
+    color:brown;
+ }
+ .b>p{
+    color:blue;
+ }
+.c h2 ~ p{
+    color:yellow;
+ }
+
+ .adjacent h2+p {
+font-size: 10px;
+color:blue;
+background-color:light gray;
+ }
+
+
+ .box{
+    border:2px dashed red;
+ }
+button{
+    background-color:blue;
+    font-size: 10px;
+    color:white;
+    cursor:pointer;
+ }
+ button:hover{
+    background-color: red;
+    font-size: 20px;
+    color:white;
+    cursor:pointer;
+ }
+
+ input:focus{
+    border: 3px solid yellow;
+    background-color:brown;
+    height: 30px;
+    outline: none;
+ }
+
+ a:link{
+    background-color: lightskyblue;
+    color: black;
+    text-decoration: none;
+    padding:6px 10px;
+    display:inline-block;
+    border-radius: 5px;
+ }
+ a:visited{
+    color:purple;
+    background-color: yellow;
+    color:red;
+ }
+
+/*
+ ul li:first-child{
+    color:red;
+    font-weight: bold;
+ }
+  ul li:last-child{
+    color:blue;
+    font-style: italic;
+ }
+  ul li:nth-child(2){
+    color:yellow;
+    font-weight: bold;
+ }
+
+   ul li:nth-child(even){
+    color:green;
+    font-weight: bold;
+ }
+   ul li:nth-child(odd){
+    color:purple;
+    font-weight: bold;
+ }
+*/
+ input:disabled{
+    background-color: aqua;
+    color:aliceblue
+ }
+
+  .notice::before{
+   content:"📢";
+   color:red;
+   font-size:25px;
+ } 
+
+ .notice{
+  
+   color:red;
+   font-size:25px;
+ } 
+
+
+  .notice::after{
+   content:"⭐";
+   color:orange;
+   
+ }
+ .description::first-letter{
+   font-size: 40px;
+   color:red;
+   font-weight: bold;
+ }
+  .description::first-line{
+   color:blue;
+   font-weight: bold;
+ }
+ .list ul li{
+   list-style-type: disc;
+ }
+ li:marker{
+   color:green;
+   font-size: 22px;
+  
+ }
+ input::placeholder{
+   color:purple;
+   font-style:italic;
+ }
+ input{
+   padding:10px;
+   width:300px;
+ }
+
+ input[required]{
+   border:2px solid red;
+ }
+ input[type="text"]{
+   background-color:yellow;
+ }
+  input[type="email"]{
+   background-color:blue;
+ }
+ a[href^="https"]{
+   color:green;
+   font-weight:bold;
+ }
+ a[href*="pu"]{
+   background-color: yellowgreen;
+ }
+ imag[src$=".jpeg"]{
+   border:3px solid black;
+ }
+ p[class~="highlight"]{
+   color:red;
+   font-weight: bold;
+ }

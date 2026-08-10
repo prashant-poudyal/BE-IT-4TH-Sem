@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+</head>
+<style>
+body{
+        margin:0;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: aqua;
+    }
+.header{
+        background-color:skyblue;
+        color:red;
+        padding:20px;
+        text-align:center;
+        font-size: 24px;
+    }
+.nav{
+        display:flex;
+        justify-content:space-around;
+        background:rgb(106, 106, 3);
+        padding:10px;
+    }
+.nav a{
+        color:rgb(15, 15, 15);
+        text-decoration:none;
+        padding:8px 12px;
+        border-radius:5px;
+        font-size: 20px;
+    }
+.nav a:hover{
+        background-color: rgb(109, 241, 97);
+        font-size: 20px;
+        box-shadow: 5px;
+    }
+.container{
+        display:flex;
+        gap:15px;
+        padding:15px;
+        height: 500px;
+    }
+
+.sidebar{
+    flex:1;
+    background:lightcoral;
+    padding:15px;
+    }
+.content{
+    flex:3;
+    background:navajowhite;
+    padding:15px;
+    }
+.cards{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+    }
+.card{
+    flex: 1;
+    background:steelblue;
+    color:lightgreen;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+    }
+.footer{
+    background:rgb(250, 197, 4);
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:10px;
+}
+    @media (max-width:992px){
+        .container{
+            flex-direction: column;
+        }
+        .cards{
+            flex-wrap:wrap;
+        }
+        .card{
+            flex: 1 1 45%;
+        }
+    }
+    @media (max-width:600px){
+        .nav{
+            flex-direction: column;
+            text-align:center;
+        }
+        .cards{
+            flex-direction:column;
+        }
+        .card{
+            flex: 1 1 100%;
+        }
+        .header{
+            font-size:18px;
+        }
+    }
+.bontainer{
+    display:flex;
+    border:2px solid black;
+    padding:10px;
+    margin-bottom:20px;
+    border-width: 4px;
+}
+.box{
+    width:60px;
+    height:60px;
+    margin:5px;
+    background:steelblue;
+    color:brown;
+    display:flex;
+    justify-content: center;
+    align-items: centers;
+    border-color: blueviolet;   
+}
+.custom1 .box1{
+    order:3;
+}
+.custom1 .box2{
+    order:1;
+}
+.custom2 .box3{
+    order:2;
+}
+.custom2 .box1{
+    order:3;
+}
+.custom2 .box2{
+    order:2;
+}
+.custom2 .box3{
+    order:1;
+}
+.default .box{
+    flex-grow: 1;
+}
+.grow-equal .box{
+    flex-grow:1;
+    width:100px;
+}
+.grow-mixed .box1{
+    flex-grow:1;
+    
+}
+.grow-mixed .box2{
+    flex-grow:1;
+    
+}
+.grow-equal .box3{
+    flex-grow:1;
+    
+}
+
+
+</style>
+<body>
+    <div class="header"> Responsive CSS Layout Example </div>
+    
+    <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Department</a>
+    <a href="#">Contact</a>
+    <a href="#">About us</a>
+    </div>
+<div class="container">
+    <div class="sidebar">
+        <h3>Notice Board</h3>
+        <ul>
+            <li>Exam Routine Released</li>
+            <li>Admission Open 2026</li>
+            <li>Scholarship Available</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to Everest Enginnering College</h2>
+        <p>THis layout automatically adapts to different scereen sizes using responsive css techniques</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">Computer Engineering</div>
+        <div class="card">Software Engineering</div>
+        <div class="card">IT Engineering</div>
+
+    </div>
+
+</div>
+</div>
+
+
+    <h2>Flex Item: Order Property</h2>
+    <div class="bontainer default">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <div class="bontainer custom1">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+
+    <div class="bontainer grow-equal">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <div class="bontainer grow-mixed">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+
+    <div>
+
+    </div>
+<div class="footer"> ©️ 2026 Engineering College </div>
+</body>
+</html>

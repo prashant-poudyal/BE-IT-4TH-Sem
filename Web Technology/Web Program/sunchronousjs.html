@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous JavaScript</title>
+</head>
+<body>
+
+    <h2>Blocking Behavior in Synchronous JavaScript</h2>
+
+    <button onclick="longTask()">Start Long Task</button>
+    <button onclick="showMessage()">Click Me While Processing</button>
+
+    <p id="output"></p>
+
+    <script>
+
+        function longTask() {
+
+            document.getElementById("output").innerHTML = "Processing started...<br>";
+
+            // Long-running synchronous task
+            for (let i = 1; i <= 1000000000; i++) {
+                // Busy loop (blocks the browser)
+            }
+
+            document.getElementById("output").innerHTML +=
+                "Processing completed successfully!";
+        }
+
+        function showMessage() {
+            alert("Second button clicked!");
+        }
+
+    </script>
+
+</body>
+</html>
